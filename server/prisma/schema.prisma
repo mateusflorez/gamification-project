@@ -15,11 +15,11 @@ model user {
   username          String   @unique
   email             String   @unique
   password          String
-  level             Int
-  profession        String
-  experience        Int
-  gold              Int
-  completedMissions Int      @map("completed_missions")
+  level             Int      @default(0)
+  profession        String   @default("")
+  experience        Int      @default(0)
+  gold              Int      @default(0)
+  completedMissions Int      @default(0) @map("completed_missions")
   createdAt         DateTime @default(now()) @map("created_at")
   updatedAt         DateTime @updatedAt @map("updated_at")
 }

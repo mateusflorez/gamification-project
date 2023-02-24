@@ -1,0 +1,6 @@
+-- AlterTable
+ALTER TABLE "user" ALTER COLUMN "level" SET DEFAULT 0,
+ALTER COLUMN "profession" SET DEFAULT '',
+ALTER COLUMN "experience" SET DEFAULT 0,
+ALTER COLUMN "gold" SET DEFAULT 0,
+ALTER COLUMN "completed_missions" SET DEFAULT 0;
