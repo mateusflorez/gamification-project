@@ -1,5 +1,6 @@
 {
     "title": "Projeto gamificação",
+    "slogan": "Transforme suas tarefas diárias em uma aventura!",
     "buttons": {
         "login": "Logar",
         "signup": "Cadastrar"
@@ -22,5 +23,8 @@
         "usedusername": "Usuário já utilizado.",
         "usedemail": "E-mail já utilizado.",
         "incorrect": "Nome ou senha incorretos"
+    },
+    "pages": {
+        "home": "Início"
     }
 }

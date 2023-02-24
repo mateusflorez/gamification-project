@@ -6,8 +6,8 @@ import { Trans, useTranslation } from "react-i18next"
 import axios from "axios"
 import "react-toastify/dist/ReactToastify.css"
 
-function Login({ lang }: { lang: string }) {
-    const { t } = useTranslation();
+function Login() {
+    const { t } = useTranslation()
 
     const toastOptions: ToastOptions = {
         position: 'bottom-right',

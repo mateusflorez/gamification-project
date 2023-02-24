@@ -1,5 +1,6 @@
 {
    "title": "Gamification project",
+   "slogan": "Turn your daily tasks into an adventure!",
    "buttons": {
       "login": "Login",
       "signup": "Sign up"
@@ -22,5 +23,8 @@
       "usedusername": "Username already used.",
       "usedemail": "Email already used.",
       "incorrect": "Incorrect username or password"
+   },
+   "pages": {
+      "home": "Home"
    }
 }

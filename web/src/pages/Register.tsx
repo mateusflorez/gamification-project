@@ -6,8 +6,8 @@ import axios from "axios"
 import "react-toastify/dist/ReactToastify.css"
 import { useTranslation } from "react-i18next"
 
-function Register({ lang }: { lang: string }) {
-    const { t } = useTranslation();
+function Register() {
+    const { t } = useTranslation()
 
     const toastOptions: ToastOptions = {
         position: 'bottom-right',
