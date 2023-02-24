@@ -27,11 +27,7 @@ class UsersController {
             })
             return res.status(201).json({
                 status: true,
-                user: {
-                    id: user.id,
-                    username: user.username,
-                    email: user.email
-                }
+                user: { user }
             })
         } catch (err) {
             next(err)
@@ -52,11 +48,27 @@ class UsersController {
 
             return res.status(200).json({
                 status: true,
-                user: {
-                    id: user.id,
-                    username: user.username,
-                    email: user.email
-                }
+                user: { user }
+            })
+        } catch (err) {
+            next(err)
+        }
+    }
+
+    async updateUser(req: Request, res: Response, next: NextFunction) {
+        try {
+            const userId = req.params.userId
+            const data = req.body
+
+            const user = await prisma.user.update({
+                where: {
+                    id: userId
+                },
+                data: data.user
+            });
+
+            return res.status(200).json({
+                user: { user }
             })
         } catch (err) {
             next(err)

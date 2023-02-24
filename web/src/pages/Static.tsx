@@ -27,6 +27,17 @@ function Static({ page }: { page: string }) {
     })
 
     useEffect(() => {
+        const getAllUsers = async () => {
+            if (currentUser) {
+                if (currentUser.profession === "") {
+                    navigate('/welcome')
+                }
+            }
+        }
+        getAllUsers()
+    }, [pageSelected])
+
+    useEffect(() => {
         setPageSelected(page)
     }, [location, page])
 
