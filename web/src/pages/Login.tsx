@@ -42,7 +42,7 @@ function Login({ lang }: { lang: string }) {
                 password
             })
             if (request.data.status === false) {
-                toast.error(request.data.message, toastOptions)
+                toast.error(`${t(request.data.message)}`, toastOptions)
             } else {
                 localStorage.setItem('user', JSON.stringify(request.data.user))
                 navigate("/")
@@ -53,11 +53,11 @@ function Login({ lang }: { lang: string }) {
     function handleValidation() {
         const { password, username } = values
         if (username === "") {
-            toast.error("Username is required", toastOptions)
+            toast.error(`${t('validation.nousername')}`, toastOptions)
             return false
         }
         if (password === "") {
-            toast.error("Password is required", toastOptions)
+            toast.error(`${t('validation.nopassword')}`, toastOptions)
             return false
         }
         return true
@@ -70,10 +70,10 @@ function Login({ lang }: { lang: string }) {
                     <div className="flex justify-center items-center gap-4">
                         <h1 className="text-white font-bold text-4xl">{t('title')}</h1>
                     </div>
-                    <input type="text" placeholder="Username" name="username" className="placeholder:text-zinc-600 text-white bg-zinc-900 p-4 rounded w-full h-14 focus:outline-none focus:bg-zinc-600 transition" onChange={e => handleChange(e)} />
-                    <input type="password" placeholder="Password" name="password" className="placeholder:text-zinc-600 text-white bg-zinc-900 p-4 rounded w-full h-14 focus:outline-none focus:bg-zinc-600 transition" onChange={e => handleChange(e)} />
-                    <button type="submit" className="bg-violet-500 rounded font-bold text-white py-4 px-8 border-none cursor-pointer transition hover:bg-violet-600">Login</button>
-                    <span className="text-white">Don't have an account? <Link to="/register" className="text-violet-500 font-bold no-underline hover:text-violet-600">Sign up</Link></span>
+                    <input type="text" placeholder={`${t('userAuthForm.username')}`} name="username" className="placeholder:text-zinc-600 text-white bg-zinc-900 p-4 rounded w-full h-14 focus:outline-none focus:bg-zinc-600 transition" onChange={e => handleChange(e)} />
+                    <input type="password" placeholder={`${t('userAuthForm.password')}`} name="password" className="placeholder:text-zinc-600 text-white bg-zinc-900 p-4 rounded w-full h-14 focus:outline-none focus:bg-zinc-600 transition" onChange={e => handleChange(e)} />
+                    <button type="submit" className="bg-violet-500 rounded font-bold text-white py-4 px-8 border-none cursor-pointer transition hover:bg-violet-600">{t('buttons.login')}</button>
+                    <span className="text-white">{t('userAuthForm.donthave')} <Link to="/register" className="text-violet-500 font-bold no-underline hover:text-violet-600">{t('buttons.signup')}</Link></span>
                 </form>
             </div>
             <ToastContainer></ToastContainer>

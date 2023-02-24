@@ -1,3 +1,26 @@
 {
-    "title": "Projeto gamificação"
+    "title": "Projeto gamificação",
+    "buttons": {
+        "login": "Logar",
+        "signup": "Cadastrar"
+    },
+    "userAuthForm": {
+        "donthave": "Não possui uma conta?",
+        "alreadyhave": "Já possui uma conta?",
+        "username": "Usuário",
+        "email": "E-mail",
+        "password": "Senha",
+        "confirmpassword": "Confirme sua senha"
+    },
+    "validation": {
+        "passworddiff": "A senha e confirmação de senha devem ser iguais.",
+        "smallusername": "Usuário deve possuir pelo menos 6 caracteres.",
+        "smallpassword": "Senha deve possuir pelo menos 8 caracteres.",
+        "noemail": "E-mail é obrigatório.",
+        "nousername": "Usuário é obrigatório.",
+        "nopassword": "Senha é obrigatória.",
+        "usedusername": "Usuário já utilizado.",
+        "usedemail": "E-mail já utilizado.",
+        "incorrect": "Nome ou senha incorretos"
+    }
 }

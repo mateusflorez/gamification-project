@@ -1,3 +1,26 @@
 {
-   "title": "Gamification project"
+   "title": "Gamification project",
+   "buttons": {
+      "login": "Login",
+      "signup": "Sign up"
+   },
+   "userAuthForm": {
+      "donthave": "Don't have an account?",
+      "alreadyhave": "Already have an account?",
+      "username": "Username",
+      "email": "E-mail",
+      "password": "Password",
+      "confirmpassword": "Confirm your password"
+   },
+   "validation": {
+      "passworddiff": "Password and confirmation password should be the same.",
+      "smallusername": "Username should be equal or greater than 6 characters.",
+      "smallpassword": "Password should be equal or greater than 8 characters.",
+      "noemail": "E-mail is required.",
+      "nousername": "Username is required.",
+      "nopassword": "Password is required.",
+      "usedusername": "Username already used.",
+      "usedemail": "Email already used.",
+      "incorrect": "Incorrect username or password"
+   }
 }

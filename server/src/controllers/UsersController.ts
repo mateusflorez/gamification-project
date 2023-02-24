@@ -11,11 +11,11 @@ class UsersController {
 
             const usernameCheck = await prisma.user.findUnique({ where: { username } })
             if (usernameCheck)
-                return res.json({ message: "Username already used", status: false })
+                return res.json({ message: "validation.usedusername", status: false })
 
             const emailCheck = await prisma.user.findUnique({ where: { email } })
             if (emailCheck)
-                return res.json({ message: "Email already used", status: false })
+                return res.json({ message: "validation.usedemail", status: false })
 
             const hashedPassword = await bcrypt.hash(password, 10)
             const user = await prisma.user.create({
@@ -44,11 +44,11 @@ class UsersController {
 
             const user = await prisma.user.findUnique({ where: { username } })
             if (!user)
-                return res.json({ message: "Incorrect username or password", status: false })
+                return res.json({ message: "validation.incorrect", status: false })
 
             const passwordCheck = await bcrypt.compare(password, user.password)
             if (!passwordCheck)
-                return res.json({ message: "Incorrect username or password", status: false })
+                return res.json({ message: "validation.incorrect", status: false })
 
             return res.status(200).json({
                 status: true,
