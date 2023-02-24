@@ -72,8 +72,8 @@ function Welcome() {
         <div className="h-screen w-screen flex flex-col justify-center items-center bg-dark">
             <div className="flex flex-col justify-center items-center gap-6 px-60">
                 <h1 className="text-white font-bold text-5xl">{t("welcome.title")}<span className='bg-rainbow-gradient text-transparent bg-clip-text'>{currentUser?.username}</span></h1>
-                <h1 className="text-white text-center font-bold text-xl">{t("welcome.text1")}<span className='bg-rainbow-gradient text-transparent bg-clip-text'></span></h1>
-                <h1 className="text-white text-center font-bold text-xl">{t("welcome.text2")}<span className='bg-rainbow-gradient text-transparent bg-clip-text'></span></h1>
+                <h1 className="text-white text-center font-bold text-xl">{t("welcome.text1")}</h1>
+                <h1 className="text-white text-center font-bold text-xl">{t("welcome.text2")}</h1>
             </div>
             <form
                 className="flex flex-col gap-8 rounded-t-lg bg-dark py-12 px-20"

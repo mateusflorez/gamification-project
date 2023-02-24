@@ -45,7 +45,7 @@ function Static({ page }: { page: string }) {
         <div className="h-screen w-full bg-dark flex flex-col items-center">
             <Header currentPage={pageSelected} />
 
-            <div className="w-[99%] flex flex-col items-center overflow-auto scrollbar">
+            <div className="flex flex-col items-center overflow-auto scrollbar">
                 {PAGES[page]}
             </div>
 
