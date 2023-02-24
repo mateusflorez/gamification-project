@@ -20,22 +20,22 @@ function Static({ page }: { page: string }) {
             if (!user) {
                 navigate('/login')
             } else {
-                setCurrentUser(await JSON.parse(user))
+                setCurrentUser(await JSON.parse(user).user)
             }
         }
         checkCurrentUser()
-    })
+    }, [])
 
     useEffect(() => {
         const getAllUsers = async () => {
             if (currentUser) {
-                if (currentUser.profession === "") {
+                if (currentUser.profession == "") {
                     navigate('/welcome')
                 }
             }
         }
         getAllUsers()
-    }, [pageSelected])
+    }, [pageSelected, currentUser])
 
     useEffect(() => {
         setPageSelected(page)

@@ -1,9 +1,15 @@
 {
     "title": "Projeto gamificação",
     "slogan": "Transforme suas tarefas diárias em uma aventura!",
+    "welcome": {
+        "title": "Seja bem-vindo(a), ",
+        "text1": "É ótimo ter você aqui e estamos ansiosos para ajudá-lo a tornar suas tarefas diárias mais divertidas e motivadoras!",
+        "text2": "Antes de começarmos, gostaríamos de saber um pouco mais sobre você. Por favor, nos informe sua profissão abaixo:"
+    },
     "buttons": {
         "login": "Logar",
-        "signup": "Cadastrar"
+        "signup": "Cadastrar",
+        "save": "Salvar"
     },
     "userAuthForm": {
         "donthave": "Não possui uma conta?",
@@ -11,7 +17,8 @@
         "username": "Usuário",
         "email": "E-mail",
         "password": "Senha",
-        "confirmpassword": "Confirme sua senha"
+        "confirmpassword": "Confirme sua senha",
+        "profession": "Profissão"
     },
     "validation": {
         "passworddiff": "A senha e confirmação de senha devem ser iguais.",
@@ -20,6 +27,7 @@
         "noemail": "E-mail é obrigatório.",
         "nousername": "Usuário é obrigatório.",
         "nopassword": "Senha é obrigatória.",
+        "noprofession": "Profissão é obrigatório.",
         "usedusername": "Usuário já utilizado.",
         "usedemail": "E-mail já utilizado.",
         "incorrect": "Nome ou senha incorretos"
