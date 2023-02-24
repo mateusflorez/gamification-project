@@ -7,25 +7,17 @@ import { useEffect } from 'react';
 function App() {
   const { i18n } = useTranslation();
 
+  const lang = navigator.language.startsWith('pt') ? 'pt' : 'en';
+
   useEffect(() => {
-    const urlLanguage = window.location.pathname.split('/')[1];
-
-    if (urlLanguage) {
-      changeLanguage(urlLanguage);
-    }
-  }, [])
-
-  const changeLanguage = (language: any) => {
-    i18n.changeLanguage(language);
-  }
-
-  const lang = i18n.language.startsWith('pt') ? 'pt' : 'en';
+    i18n.changeLanguage(lang);
+  }, [i18n, lang]);
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={`/${lang}/register`} element={<Register lang={lang} />} />
-        <Route path={`/${lang}/login`} element={<Login lang={lang} />} />
+        <Route path={`/register`} element={<Register lang={lang} />} />
+        <Route path={`/login`} element={<Login lang={lang} />} />
       </Routes>
     </BrowserRouter>
   )
