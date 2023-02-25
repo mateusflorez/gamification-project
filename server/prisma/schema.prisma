@@ -30,7 +30,7 @@ model mission {
   userId     String
   name       String
   experience Int
-  status     Int //0-finished 1-in progress
+  status     Int      @default(1) //0-finished 1-in progress
   type       Int //1-event 2-mission 3-daily mission
   createdAt  DateTime @default(now()) @map("created_at")
   updatedAt  DateTime @updatedAt @map("updated_at")
