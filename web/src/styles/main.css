@@ -14,13 +14,13 @@
   }
 
   .scrollbar::-webkit-scrollbar-thumb {
-    background: #7C2D12;
+    background: #8759EE;
     border-radius: 100vh;
     width: 0.1rem;
   }
 
   .scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #EA580B;
+    background: #7C3AED;
   }
 
   select {
